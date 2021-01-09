@@ -2,6 +2,7 @@ package com.yannickBellerose.terminalInterface;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Side;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TabPane;
@@ -23,15 +24,18 @@ public class App extends Application{
 		TerminalBuilder terminalBuilder = new TerminalBuilder();
         TerminalTab terminal = terminalBuilder.newTerminal();
         TabPane tabPane = new TabPane();
+        tabPane.setSide(Side.BOTTOM);
         tabPane.getTabs().add(terminal);
+        tabPane.setMinHeight(450);
 		
         FXMLLoader loaded = new FXMLLoader(getClass().getResource("/testJavaFX_v2.fxml"));
         Parent topMenu = loaded.load();
         
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(topMenu, tabPane);
+        vbox.getChildren().addAll(topMenu,tabPane);
         
 		Scene scene = new Scene(vbox, 900, 600);
+        
 		primaryStage.setTitle("K.I.S.S.I.T.");
 		primaryStage.setScene(scene);
 		primaryStage.show();
