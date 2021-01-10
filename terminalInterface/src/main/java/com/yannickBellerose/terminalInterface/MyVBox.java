@@ -13,16 +13,16 @@ import javafx.scene.layout.VBox;
 
 public class MyVBox{
 	MyController controller;
-	TerminalTab terminal;
+	TabPane thatTab;
 	
 	public VBox getVBox() throws IOException{
 		TerminalBuilder terminalBuilder = new TerminalBuilder();
         TerminalTab term = terminalBuilder.newTerminal();
         TabPane tabPane = new TabPane();
         tabPane.setSide(Side.BOTTOM);
-        tabPane.getTabs().add(term);
+        tabPane.getTabs().addAll(term);
         tabPane.setMinHeight(450);
-        terminal = term;
+        thatTab = tabPane;
         
         FXMLLoader loaded = new FXMLLoader(getClass().getResource("/testJavaFX_v2.fxml"));
         Parent topMenu = loaded.load();
@@ -43,6 +43,7 @@ public class MyVBox{
 	}
 	
 	public void exec(String command) {
-		terminal.getTerminal().command(command);
+		TerminalTab currentTab = (TerminalTab) thatTab.getSelectionModel().getSelectedItem();
+		currentTab.getTerminal().command(command);
 	}
 }
