@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="150.0" minHeight="150.0" prefHeight="150.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="150.0" minHeight="150.0" prefHeight="150.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yannickBellerose.terminalInterface.MyController">
   <children>
       <TabPane prefHeight="237.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -23,12 +23,12 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Current Directory">
+                                    <Button mnemonicParsing="false" onAction="#current" prefWidth="90.0" text="Current">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Change directory">
+                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Move to">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -183,7 +183,7 @@
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Pattern in files">
+                                    <Button mnemonicParsing="false" prefWidth="90.0" text="In files">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -236,7 +236,7 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Used command">
+                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Command">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -307,7 +307,7 @@
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Website owner">
+                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Who is">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -318,7 +318,7 @@
                                        </TilePane.margin>
                                     </Button>
                                     <Button mnemonicParsing="false" prefWidth="90.0" text="Driver" />
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="DNS lookup" />
+                                    <Button mnemonicParsing="false" prefWidth="90.0" text="DNS" />
                                  </children>
                                  <BorderPane.margin>
                                     <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
@@ -400,7 +400,7 @@
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button layoutX="17.0" layoutY="39.0" mnemonicParsing="false" prefWidth="90.0" text="Current user" />
+                                    <Button layoutX="17.0" layoutY="39.0" mnemonicParsing="false" prefWidth="90.0" text="Current" />
                                  </children>
                                  <BorderPane.margin>
                                     <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
@@ -459,7 +459,7 @@
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Kill process">
+                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Kill">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -582,6 +582,35 @@
                            </top>
                         </BorderPane>
                         <Separator layoutX="416.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <BorderPane layoutX="422.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                           <center>
+                              <TilePane alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefWidth="90.0" text="List">
+                                       <TilePane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </TilePane.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Add">
+                                       <TilePane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </TilePane.margin>
+                                    </Button>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </BorderPane.margin>
+                              </TilePane>
+                           </center>
+                           <top>
+                              <Label text="SHORTCUT" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="2.0" />
+                                 </BorderPane.margin>
+                              </Label>
+                           </top>
+                        </BorderPane>
+                        <Separator layoutX="622.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
                      </children>
                   </HBox>
                </content>
