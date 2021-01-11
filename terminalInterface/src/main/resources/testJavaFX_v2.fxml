@@ -178,17 +178,17 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Files">
+                                    <Button mnemonicParsing="false" onAction="#find" prefWidth="90.0" text="Files">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="In files">
+                                    <Button mnemonicParsing="false" onAction="#grep" prefWidth="90.0" text="In files">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Replace">
+                                    <Button mnemonicParsing="false" onAction="#sed" prefWidth="90.0" text="Replace">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -212,7 +212,7 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Sort">
+                                    <Button mnemonicParsing="false" onAction="#sort" prefWidth="90.0" text="Sort">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -236,7 +236,7 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Command">
+                                    <Button mnemonicParsing="false" onAction="#history" prefWidth="90.0" text="Command">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -268,12 +268,12 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Connect">
+                                    <Button mnemonicParsing="false" onAction="#ssh" prefWidth="90.0" text="Connect">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Move file">
+                                    <Button mnemonicParsing="false" onAction="#scp" prefWidth="90.0" text="Move file">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -297,28 +297,28 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Download">
+                                    <Button mnemonicParsing="false" onAction="#wget" prefWidth="90.0" text="Download">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Ping">
+                                    <Button mnemonicParsing="false" onAction="#ping" prefWidth="90.0" text="Ping">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Who is">
+                                    <Button mnemonicParsing="false" onAction="#whois" prefWidth="90.0" text="Who is">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Interface">
+                                    <Button mnemonicParsing="false" onAction="#ifconfig" prefWidth="90.0" text="Interface">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Driver" />
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="DNS" />
+                                    <Button mnemonicParsing="false" onAction="#ethtool" prefWidth="90.0" text="Driver" />
+                                    <Button mnemonicParsing="false" onAction="#dig" prefWidth="90.0" text="DNS" />
                                  </children>
                                  <BorderPane.margin>
                                     <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
@@ -346,17 +346,17 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Change">
+                                    <Button mnemonicParsing="false" onAction="#chmod" prefWidth="90.0" text="Change">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Owner">
+                                    <Button mnemonicParsing="false" onAction="#chown" prefWidth="90.0" text="Owner">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Superuser">
+                                    <Button mnemonicParsing="false" onAction="#sudo" prefWidth="90.0" text="Superuser">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -380,27 +380,27 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Add">
+                                    <Button mnemonicParsing="false" onAction="#adduser" prefWidth="90.0" text="Add">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Password">
+                                    <Button mnemonicParsing="false" onAction="#passwd" prefWidth="90.0" text="Password">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Remove">
+                                    <Button mnemonicParsing="false" onAction="#userdel" prefWidth="90.0" text="Remove">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Group">
+                                    <Button mnemonicParsing="false" onAction="#usermod" prefWidth="90.0" text="Group">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button layoutX="17.0" layoutY="39.0" mnemonicParsing="false" prefWidth="90.0" text="Current" />
+                                    <Button layoutX="17.0" layoutY="39.0" mnemonicParsing="false" onAction="#id" prefWidth="90.0" text="Current" />
                                  </children>
                                  <BorderPane.margin>
                                     <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
@@ -420,16 +420,17 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Install">
+                                    <Button mnemonicParsing="false" onAction="#apt" prefWidth="90.0" text="Install">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Binary">
+                                    <Button mnemonicParsing="false" onAction="#make" prefWidth="90.0" text="Binary">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
+                                    <Button layoutX="109.0" layoutY="11.0" mnemonicParsing="false" onAction="#git" prefWidth="90.0" text="Repository" />
                                  </children>
                                  <BorderPane.margin>
                                     <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
@@ -449,24 +450,24 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Process">
+                                    <Button mnemonicParsing="false" onAction="#top" prefWidth="90.0" text="Process">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Task">
+                                    <Button mnemonicParsing="false" onAction="#ps" prefWidth="90.0" text="Task">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Kill">
+                                    <Button mnemonicParsing="false" onAction="#kill" prefWidth="90.0" text="Kill">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button layoutX="63.0" layoutY="39.0" mnemonicParsing="false" prefWidth="90.0" text="Mount" />
-                                    <Button layoutX="17.0" layoutY="39.0" mnemonicParsing="false" prefWidth="90.0" text="Memory" />
-                                    <Button layoutX="17.0" layoutY="39.0" mnemonicParsing="false" prefWidth="90.0" text="Date" />
+                                    <Button layoutX="63.0" layoutY="39.0" mnemonicParsing="false" onAction="#mount" prefWidth="90.0" text="Mount" />
+                                    <Button layoutX="17.0" layoutY="39.0" mnemonicParsing="false" onAction="#free" prefWidth="90.0" text="Memory" />
+                                    <Button layoutX="17.0" layoutY="39.0" mnemonicParsing="false" onAction="#date" prefWidth="90.0" text="Date" />
                                  </children>
                                  <BorderPane.margin>
                                     <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
@@ -494,17 +495,17 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Execute">
+                                    <Button mnemonicParsing="false" onAction="#execute" prefWidth="90.0" text="Execute">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Create">
+                                    <Button mnemonicParsing="false" onAction="#echoTemplate" prefWidth="90.0" text="Create">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Schedule">
+                                    <Button mnemonicParsing="false" onAction="#crontab" prefWidth="90.0" text="Schedule">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -528,12 +529,12 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Overwrite">
+                                    <Button mnemonicParsing="false" onAction="#writeTo" prefWidth="90.0" text="Overwrite">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Append">
+                                    <Button mnemonicParsing="false" onAction="#appendTo" prefWidth="90.0" text="Append">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -557,12 +558,12 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Pipe">
+                                    <Button mnemonicParsing="false" onAction="#pipeTo" prefWidth="90.0" text="Pipe">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Sequence">
+                                    <Button mnemonicParsing="false" onAction="#sequenceTo" prefWidth="90.0" text="Sequence">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -586,12 +587,12 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="List">
+                                    <Button mnemonicParsing="false" onAction="#alias" prefWidth="90.0" text="List">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Add">
+                                    <Button mnemonicParsing="false" onAction="#aliasAdd" prefWidth="90.0" text="Add">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -623,7 +624,7 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Clear">
+                                    <Button mnemonicParsing="false" onAction="#clear" prefWidth="90.0" text="Clear">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -655,12 +656,12 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" tileAlignment="TOP_CENTER" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Manual">
+                                    <Button mnemonicParsing="false" onAction="#man" prefWidth="90.0" text="Manual">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Tutorial">
+                                    <Button mnemonicParsing="false" onAction="#tutorial" prefWidth="90.0" text="Tutorial">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
@@ -684,22 +685,22 @@
                            <center>
                               <TilePane alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" tileAlignment="TOP_CENTER" BorderPane.alignment="TOP_CENTER">
                                  <children>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Feedback">
+                                    <Button mnemonicParsing="false" onAction="#feedback" prefWidth="90.0" text="Feedback">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="Donate">
+                                    <Button mnemonicParsing="false" onAction="#donate" prefWidth="90.0" text="Donate">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="License">
+                                    <Button mnemonicParsing="false" onAction="#license" prefWidth="90.0" text="License">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefWidth="90.0" text="About">
+                                    <Button mnemonicParsing="false" onAction="#about" prefWidth="90.0" text="About">
                                        <TilePane.margin>
                                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                                        </TilePane.margin>
