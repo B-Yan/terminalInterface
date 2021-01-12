@@ -1,8 +1,8 @@
 # terminalInterface
 
-## Description
-
 - I want to apologize for the gramatical error I may have made, this is not my first tongue. If you find any please inform me in the issue section or better yet edit and push your correction.
+
+## Description
 
 A small java software to implement an efficient GUI to the linux command line tool. It is intended for education purpose and eventually (when it will be thorougly debugged) for business purpose. Indeed the purpose is to offer to professional business user the kind of automation used by IT professional and more globally to facilitate the passage from GUI to CLI user.
 
@@ -16,12 +16,12 @@ Yannick Bellerose (B-Yan on github)
 
 This is still a beta so there is no .jar yet. Here is the quickest way to install it.
 
-- Make sure you have java 8 jdk, maven and git installed -> 'sudo apt install maven, git, openjdk-8-jdk'
-- Copy all the files from this github repository -> 'git clone https://github.com/B-Yan/terminalInterface'
-- Go to terminalInterface/terminalInterface there should be a file named Makefile -> 'cd terminalInterface & cd terminalInterface'
-- Make the file -> 'make install'
+- Make sure you have java 8 jdk, maven and git installed -> `sudo apt install maven, git, openjdk-8-jdk`
+- Copy all the files from this github repository -> `git clone https://github.com/B-Yan/terminalInterface`
+- Go to terminalInterface/terminalInterface there should be a file named Makefile -> `cd terminalInterface & cd terminalInterface`
+- Make the file -> `make install`
 
-Everytime you will want to start the app you will have to go to this same folder and enter -> 'make'
+Everytime you will want to start the app you will have to go to this same folder and enter -> `make`
 
 ## How to use
 
@@ -30,6 +30,7 @@ Everytime you will want to start the app you will have to go to this same folder
 ## Library
 
 javafx (https://openjfx.io/)
+
 terminalFx (https://github.com/javaterminal/TerminalFX)
 
 ## Status
