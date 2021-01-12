@@ -1,9 +1,9 @@
-# terminalInterface
-
 # TODO
 - add all command
-- add tab
 - detect windows/mac and prompt ssh
-- add shortcuts/alias list
 - make .jar and .exe
+- make people test it and correct it so it is perfectly clear
+
+# TODO low priority
+- add tab
 - scrollbar (never worked in terminalFX need to be implanted)
