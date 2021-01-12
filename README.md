@@ -16,7 +16,7 @@ Yannick Bellerose (B-Yan on github)
 
 This is still a beta so there is no .jar yet. Here is the quickest way to install it.
 
-- Make sure you have java 8 jdk, maven and git installed -> `sudo apt install maven, git, openjdk-8-jdk`
+- Make sure you have java 8 jdk, maven and git installed -> `sudo apt install maven git openjdk-8-jdk`
 - Copy all the files from this github repository -> `git clone https://github.com/B-Yan/terminalInterface`
 - Go to terminalInterface/terminalInterface there should be a file named Makefile -> `cd terminalInterface & cd terminalInterface`
 - Make the file -> `make install`
