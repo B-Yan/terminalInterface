@@ -34,4 +34,4 @@ terminalFx (https://github.com/javaterminal/TerminalFX)
 
 ## Status
 
-The project is functional but some advanced command line tool haven't been implanted yet. Also the app don't complete clause when the window is closed, you need to close the terminal that launched the app.
+The project is functional but some advanced command line tool haven't been implanted yet. Also the app don't completly clause when the window is closed, you need to close the terminal that launched the app.
