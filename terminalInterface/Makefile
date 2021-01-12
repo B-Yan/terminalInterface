@@ -5,3 +5,6 @@ run: ; mvn javafx:run
 
 .PHONY: test
 test: ; mvn clean install && mvn clean javafx:run
+
+.PHONY: install
+install: ; mvn install && mvn javafx:run
