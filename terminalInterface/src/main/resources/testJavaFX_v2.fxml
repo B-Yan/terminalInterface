@@ -431,6 +431,7 @@
                                        </TilePane.margin>
                                     </Button>
                                     <Button layoutX="109.0" layoutY="11.0" mnemonicParsing="false" onAction="#git" prefWidth="90.0" text="Repository" />
+                                    <Button layoutX="17.0" layoutY="11.0" mnemonicParsing="false" onAction="#update" prefWidth="90.0" text="Update" />
                                  </children>
                                  <BorderPane.margin>
                                     <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
