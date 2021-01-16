@@ -1,8 +1,8 @@
 # TODO
-- add all command
-- detect windows/mac and prompt ssh
+- test on windows
+- add comments to code
 - make .jar and .exe
-- make people test it and correct it so it is perfectly clear
+- make people test it
 
 # TODO low priority
 - add tab
