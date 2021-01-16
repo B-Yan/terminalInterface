@@ -1,4 +1,4 @@
-package com.yannickBellerose.terminalInterface;
+package com.yannickBellerose.terminalInterface.MyButtons;
 
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -12,7 +12,7 @@ public class MyPopup extends Stage{
 	
 	boolean writeIt;
 	
-	MyPopup(String commandName, Pane pane){
+	public MyPopup(String commandName, Pane pane){
 		super();
 		this.initModality(Modality.APPLICATION_MODAL);
 		this.setTitle(commandName);

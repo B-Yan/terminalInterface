@@ -1,4 +1,4 @@
-package com.yannickBellerose.terminalInterface;
+package com.yannickBellerose.terminalInterface.MyButtons;
 
 import javafx.scene.Node;
 import javafx.scene.control.CheckBox;
@@ -9,7 +9,7 @@ public class ButtonCheck extends MyField {
 	String command;
 	CheckBox cb;
 	
-	ButtonCheck(String label, String command){
+	public ButtonCheck(String label, String command){
 		this.label = label;
 		this.command = command;
 		this.cb = new CheckBox();

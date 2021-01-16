@@ -2,9 +2,10 @@ package com.yannickBellerose.terminalInterface;
 
 import java.io.IOException;
 
+import org.apache.commons.lang3.SystemUtils;
+
 import com.kodedu.terminalfx.TerminalBuilder;
 import com.kodedu.terminalfx.TerminalTab;
-
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Side;
 import javafx.scene.Parent;
@@ -25,6 +26,7 @@ public class MyVBox {
 	public VBox getVBox() throws IOException {
 		TerminalBuilder terminalBuilder = new TerminalBuilder();
 		TerminalTab term = terminalBuilder.newTerminal();
+		
 		TabPane tabPane = new TabPane();
 		tabPane.setSide(Side.BOTTOM);
 		tabPane.getTabs().addAll(term);
@@ -42,6 +44,14 @@ public class MyVBox {
 		vbox.heightProperty().addListener(e -> {
 			tabPane.setMinHeight(vbox.getHeight() - 150);
 		});
+		
+		term.onTerminalFxReady(() -> {
+			if(SystemUtils.IS_OS_WINDOWS) {
+				term.getTerminal().command("ssh USER_NAME@IP_ADRESS");
+			} else {
+				term.getTerminal().command("cd ~ && clear\n");
+			}
+		});
 		return vbox;
 	}
 
@@ -53,4 +63,5 @@ public class MyVBox {
 		TerminalTab currentTab = (TerminalTab) thatTab.getSelectionModel().getSelectedItem();
 		currentTab.getTerminal().command(command);
 	}
+	
 }

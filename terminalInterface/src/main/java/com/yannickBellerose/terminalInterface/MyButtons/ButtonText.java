@@ -1,4 +1,4 @@
-package com.yannickBellerose.terminalInterface;
+package com.yannickBellerose.terminalInterface.MyButtons;
 
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
@@ -8,7 +8,7 @@ public class ButtonText extends MyField {
 	String name;
 	TextField text;
 	
-	ButtonText(String label){
+	public ButtonText(String label){
 		name = label;
 		text = new TextField();
 	}

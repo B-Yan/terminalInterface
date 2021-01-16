@@ -1,7 +1,9 @@
-package com.yannickBellerose.terminalInterface;
+package com.yannickBellerose.terminalInterface.MyButtons;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import com.yannickBellerose.terminalInterface.MyButtons.MyField;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -13,11 +15,11 @@ public class MyForm extends VBox{
 
 	ArrayList<MyField> button;
 	
-	MyForm(MyField[] buttons){
+	public MyForm(MyField[] buttons){
 		buildMyForm(new ArrayList<MyField>(Arrays.asList(buttons)));
 	}
 	
-	MyForm(ArrayList<MyField> buttons){
+	public MyForm(ArrayList<MyField> buttons){
 		buildMyForm(buttons);
 	}
 	
@@ -42,9 +44,13 @@ public class MyForm extends VBox{
         pane.setVgap(10);
         pane.setPadding(new Insets(25, 25, 25, 25));
         
+        int j = 0;
         for (int i = 0; i<button.size(); i++) {
-        		pane.add(new Label(button.get(i).getName()), 0, i);
-        		pane.add(button.get(i).getChild(), 1, i);
+        	if (button.get(i).getChild() != null) {
+        		pane.add(new Label(button.get(i).getName()), 0, j);
+        		pane.add(button.get(i).getChild(), 1, j);
+        		j++;
+        	}
         }
         
 		return pane;

@@ -1,6 +1,7 @@
 package com.yannickBellerose.terminalInterface;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -15,8 +16,9 @@ public class App extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		MyVBox vbox = new MyVBox(primaryStage);
+		
 		Scene scene = new Scene(vbox.getVBox(), 900, 600);
-
+		
 		MyController controller = vbox.getController();
 		controller.setVBox(vbox);
 
@@ -27,5 +29,10 @@ public class App extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
+	}
+	
+	public void stop() {
+		Platform.exit();
+		System.exit(0);
 	}
 }

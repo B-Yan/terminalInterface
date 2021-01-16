@@ -5,14 +5,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.yannickBellerose.terminalInterface.MyButtons.ButtonCheck;
+import com.yannickBellerose.terminalInterface.MyButtons.ButtonRadio;
+import com.yannickBellerose.terminalInterface.MyButtons.ButtonText;
+import com.yannickBellerose.terminalInterface.MyButtons.MyField;
+import com.yannickBellerose.terminalInterface.MyButtons.MyForm;
+import com.yannickBellerose.terminalInterface.MyButtons.MyPopup;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 public class MyController {
 	MyVBox vbox;
-
-	final String preAdvanced = "echo '";
-	final String advanced = " IS AN ADVANCED COMMAND AND HAVENT BEEN IMPLEMENTED YET- THERE ARE ALOT OF GREAT TUTORIAL FOR THIS COMMAND ONLINE'\n";
 
 	public void setVBox(MyVBox vBox) {
 		vbox = vBox;
@@ -146,7 +150,7 @@ public class MyController {
 
 	@FXML
 	public void sed(ActionEvent event) throws IOException {
-		vbox.exec(preAdvanced + "sed" + advanced); //TODO ...
+		vbox.exec("sed 's/SEARCH/REPLACE_BY/g' FILE_NAME");
 	}
 
 	@FXML
@@ -163,7 +167,7 @@ public class MyController {
 
 	@FXML
 	public void ssh(ActionEvent event) throws IOException {
-		vbox.exec("ssh USERNAME@HOST/IP_ADRESSE");
+		vbox.exec("ssh USERNAME@IP_ADRESSE");
 	}
 
 	@FXML
@@ -188,12 +192,12 @@ public class MyController {
 
 	@FXML
 	public void ifconfig(ActionEvent event) throws IOException {
-		vbox.exec(preAdvanced + "ip" + advanced); //TODO
+		vbox.exec("man ip");
 	}
 
 	@FXML
 	public void ethtool(ActionEvent event) throws IOException {
-		vbox.exec(preAdvanced + "ethtool" + advanced); //TODO
+		vbox.exec("man ethtool");
 	}
 
 	@FXML
@@ -204,7 +208,7 @@ public class MyController {
 	/*-------------------------ADMINISTRATION-------------------------*/
 
 	@FXML
-	public void chmod(ActionEvent event) throws IOException {
+	public void chmod(ActionEvent event) throws IOException { //TODO wont work
 		String[] a1 = {"File", "Folder"};
 		String[] a2 = {"", " -r"};
 		MyField[] buttons = {
@@ -227,12 +231,16 @@ public class MyController {
 			
 			int i = 0;
 			int sum = 0;
-			if(formData.get(0).contains("-r")){
-				i++;
-				command += " -r";
-			}
-			for (int a = i; a<formData.size(); a++) {
-				sum += Integer.parseInt(formData.get(a));
+			if (formData.size() > 0){
+				if(formData.get(0).contains("-r")){
+					i++;
+					command += " -r";
+				}
+				for (int a = i; a<formData.size(); a++) {
+					if (formData.get(a) != "" && !formData.get(a).isEmpty() && formData.get(a) != null) {
+						sum += Integer.parseInt(formData.get(a));
+					}
+				}
 			}
 			if (sum < 10) {
 				command += " 00";
@@ -274,12 +282,20 @@ public class MyController {
 
 	@FXML
 	public void usermod(ActionEvent event) throws IOException {
-		vbox.exec(preAdvanced + "usermod" + advanced); //TODO
+		ArrayList<MyField> buttons = new ArrayList<MyField>();
+		String[] a1 = {"List existing group", "Create new group", "Add user to group", "Remove user from group"};
+		String[] a2 = {"getent group", "groupadd GROUP_NAME", "usermod -a -G NEW_GROUP USER_NAME", "gpasswd -d USER_NAME GROUP_NAME"};
+		buttons.add(new ButtonRadio("Manage group", a1, a2));
+		MyForm form = new MyForm(buttons);
+		MyPopup popup = new MyPopup("Group - access", form);
+		if(popup.getWritten()) {
+			vbox.exec(form.getCommand());
+		}
 	}
 
 	@FXML
 	public void id(ActionEvent event) throws IOException {
-		vbox.exec("id USER_NAME");
+		vbox.exec("id");
 	}
 
 	@FXML
@@ -370,7 +386,7 @@ public class MyController {
 
 	@FXML
 	public void crontab(ActionEvent event) throws IOException {
-		vbox.exec(advanced); //TODO
+		vbox.exec("crontab -e");
 	}
 
 	@FXML
@@ -419,27 +435,27 @@ public class MyController {
 
 	@FXML
 	public void tutorial(ActionEvent event) throws IOException {
-		vbox.exec("sensible-browser https://duckduckgo.com/?t=lm&q=linux+command+line+tutorial&ia=web\n");
+		vbox.exec("sensible-browser https://duckduckgo.com/?t=lm&q=linux+command+line+tutorial&ia=web");
 	}
 
 	@FXML
 	public void feedback(ActionEvent event) throws IOException {
-		vbox.exec("sensible-browser https://github.com/B-Yan/terminalInterface/issues\n");
+		vbox.exec("sensible-browser https://github.com/B-Yan/terminalInterface/issues");
 	}
 
 	@FXML
 	public void donate(ActionEvent event) throws IOException {
 		vbox.exec(
-				"echo 'Thank you for you interest! Please go and give to your favorite linux distribution! They have a full time team and need the fund to keep making great software for us to enjoy our command line tool!'\n");
+				"echo 'Thank you for you interest! Please go and give to your favorite linux distribution! They have a full time team and need the fund to keep making great software for us to enjoy our command line tool!'");
 	}
 
 	@FXML
 	public void license(ActionEvent event) throws IOException {
-		vbox.exec("sensible-browser https://github.com/B-Yan/terminalInterface/blob/main/LICENSE\n");
+		vbox.exec("sensible-browser https://github.com/B-Yan/terminalInterface/blob/main/LICENSE");
 	}
 
 	@FXML
 	public void about(ActionEvent event) throws IOException {
-		vbox.exec("sensible-browser https://github.com/B-Yan/terminalInterface\n");
+		vbox.exec("sensible-browser https://github.com/B-Yan/terminalInterface");
 	}
 }

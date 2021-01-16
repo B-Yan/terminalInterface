@@ -1,4 +1,4 @@
-package com.yannickBellerose.terminalInterface;
+package com.yannickBellerose.terminalInterface.MyButtons;
 
 import javafx.scene.Node;
 
