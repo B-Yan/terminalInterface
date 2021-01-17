@@ -14,7 +14,7 @@ Yannick Bellerose (B-Yan on github)
 
 ## How to install 
 
-This is still a beta so there is no .jar yet. Here is the quickest way to install it.
+### Install from the binary
 
 - Make sure you have java 8 jdk, maven and git installed -> `sudo apt install maven git openjdk-8-jdk`
 - Copy all the files from this github repository -> `git clone https://github.com/B-Yan/terminalInterface`
@@ -22,6 +22,23 @@ This is still a beta so there is no .jar yet. Here is the quickest way to instal
 - Make the file -> `make install`
 
 Everytime you will want to start the app you will have to go to this same folder and enter -> `make`
+
+### Install with the .jar
+
+- Install java
+    - On linux -> `sudo apt install openjdk-8-jdk`
+    - On windows -> google java jre and install the .exe
+- Right click on the jar and select open with java or openjdk
+
+### Install with .exe
+
+- Double click on the .exe and follow the prompt
+
+### Warning to windows user
+
+The command are linux command, when you open the application the ssh command will be pre-entered. You have to connect via ssh to a linux computer for the command to work.
+
+If you are just starting with the command line I recommend you seek advice on how to setup SSH on the server or to simply use this software on a linux machine.
 
 ## How to use
 
@@ -35,4 +52,4 @@ terminalFx (https://github.com/javaterminal/TerminalFX)
 
 ## Status
 
-The project is functional but some advanced command line tool haven't been implanted yet. Also the app don't completly clause when the window is closed, you need to close the terminal that launched the app.
+Finished
