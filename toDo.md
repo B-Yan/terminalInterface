@@ -1,7 +1,5 @@
 # TODO
-- test on windows
-- add comments to code
-- make .jar and .exe
+- make .exe
 - make people test it
 
 # TODO low priority

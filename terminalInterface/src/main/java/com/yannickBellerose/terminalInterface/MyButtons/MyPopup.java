@@ -8,6 +8,12 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+
+/**
+ * A popup pan who detect if you close it or if you click on the "write" button
+ * 
+ * @author yan
+ */
 public class MyPopup extends Stage{
 	
 	boolean writeIt;
@@ -34,6 +40,10 @@ public class MyPopup extends Stage{
 		this.showAndWait();
 	}
 	
+	/**
+	 * 
+	 * @return true if the popup has been closed by clicking on "write" or false otherwise
+	 */
 	public boolean getWritten() {
 		return writeIt;
 	}

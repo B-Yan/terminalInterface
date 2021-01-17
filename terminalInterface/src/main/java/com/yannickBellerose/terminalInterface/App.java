@@ -6,16 +6,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * An application used to add an excel like interface to the linux command line
- * tool
+ * An application used to add an excel like interface to the linux command line tool
+ * For more information: https://github.com/B-Yan/terminalInterface
  * 
- * @author yan
+ * @author yannick bellerose
  * @version 1.0.0
  */
 public class App extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		MyVBox vbox = new MyVBox(primaryStage);
+		MyVBox vbox = new MyVBox();
 		
 		Scene scene = new Scene(vbox.getVBox(), 900, 600);
 		

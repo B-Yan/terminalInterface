@@ -11,18 +11,17 @@ import javafx.geometry.Side;
 import javafx.scene.Parent;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 public class MyVBox {
 	MyController controller;
 	TabPane thatTab;
-	Stage stage;
 
-	MyVBox(Stage myStage) {
-		super();
-		stage = myStage;
-	}
-
+	/**
+	 * Create a VBox which contains a menu and the terminal
+	 * 
+	 * @return the VBox which contains everything displayed
+	 * @throws IOException
+	 */
 	public VBox getVBox() throws IOException {
 		TerminalBuilder terminalBuilder = new TerminalBuilder();
 		TerminalTab term = terminalBuilder.newTerminal();
@@ -59,6 +58,12 @@ public class MyVBox {
 		return controller;
 	}
 
+	/**
+	 * This function display the command on the command prompt
+	 * If it contains \n it will execute it
+	 * 
+	 * @param command the string to put on the command prompt
+	 */
 	public void exec(String command) {
 		TerminalTab currentTab = (TerminalTab) thatTab.getSelectionModel().getSelectedItem();
 		currentTab.getTerminal().command(command);

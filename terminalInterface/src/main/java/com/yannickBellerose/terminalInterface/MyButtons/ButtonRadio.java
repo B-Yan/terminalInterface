@@ -14,6 +14,13 @@ public class ButtonRadio extends MyField{
 	String label;
 	String[] commandList;
 	
+	/**
+	 * Make sure optionName.length == command.length and that the command for optionName[y] is command[y]
+	 * 
+	 * @param name the name to put on the label
+	 * @param optionName a list of all the options
+	 * @param command the command printed for each options, every command have the same index as the optionName
+	 */
 	public ButtonRadio(String name, String[] optionName, String[] command){
 		label = name;
 		commandList = command;
@@ -34,6 +41,10 @@ public class ButtonRadio extends MyField{
 
 	}
 	
+	/**
+	 * 
+	 * @return command the command associated with the selected radio
+	 */
 	@Override
 	public String getCommand() {
 		String command = "";

@@ -11,6 +11,13 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
+/**
+ * A VBox who act as a form who take in buttons and return a command
+ * 
+ * It automatically populate a gridpane with the array of buttons
+ * 
+ * @author yan
+ */
 public class MyForm extends VBox{
 
 	ArrayList<MyField> button;
@@ -29,6 +36,10 @@ public class MyForm extends VBox{
         this.getChildren().add(buildGridPane(button));
 	}
 	
+	/**
+	 * 
+	 * @return the command to display on the command prompt
+	 */
 	public String getCommand() {
 		String command = "";
 		for (int i = 0; i<button.size(); i++) {

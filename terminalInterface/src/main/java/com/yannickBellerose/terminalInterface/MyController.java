@@ -15,6 +15,11 @@ import com.yannickBellerose.terminalInterface.MyButtons.MyPopup;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
+/**
+ * This is the class who receives all buttons input and process their behavior.
+ * 
+ * @author yan
+ */
 public class MyController {
 	MyVBox vbox;
 
