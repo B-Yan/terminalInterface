@@ -36,13 +36,9 @@ Everytime you will want to start the app you will have to go to this same folder
 
 ### Warning to windows user
 
-The command are linux command, when you open the application the ssh command will be pre-entered. You have to connect via ssh to a linux computer for the command to work.
+The command are linux command, when you open the application the ssh command will be pre-entered. You have to connect via ssh to a linux computer for the other command to work. Simply enter ssh USER@IP on the prompt of the application.
 
 If you are just starting with the command line I recommend you seek advice on how to setup SSH on the server or to simply use this software on a linux machine.
-
-## How to use
-
-<example>
 
 ## Library
 
